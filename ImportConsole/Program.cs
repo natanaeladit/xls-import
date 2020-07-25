@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ImportConsole
 {
@@ -55,6 +56,16 @@ namespace ImportConsole
                         }
                     }
                 }
+                Console.WriteLine($"Reading file completed");
+                Console.WriteLine($"BankName: {branches.OrderByDescending(e => e.BankName?.Length).FirstOrDefault()?.BankName?.Length}");
+                Console.WriteLine($"BankCode: {branches.OrderByDescending(e => e.BankCode?.Length).FirstOrDefault()?.BankCode?.Length}");
+                Console.WriteLine($"BankBranchName: {branches.OrderByDescending(e => e.BankBranchName?.Length).FirstOrDefault()?.BankBranchName?.Length}");
+                Console.WriteLine($"BranchCode: {branches.OrderByDescending(e => e.BranchCode?.Length).FirstOrDefault()?.BranchCode?.Length}");
+                Console.WriteLine($"CodeType1: {branches.OrderByDescending(e => e.CodeType1?.Length).FirstOrDefault()?.CodeType1?.Length}");
+                Console.WriteLine($"Code1: {branches.OrderByDescending(e => e.Code1?.Length).FirstOrDefault()?.Code1?.Length}");
+                Console.WriteLine($"CodeType2: {branches.OrderByDescending(e => e.CodeType2?.Length).FirstOrDefault()?.CodeType2?.Length}");
+                Console.WriteLine($"Code2: {branches.OrderByDescending(e => e.Code2?.Length).FirstOrDefault()?.Code2?.Length}");
+                Console.WriteLine($"SyntaxRestrictionOnAccountNo: {branches.OrderByDescending(e => e.SyntaxRestrictionOnAccountNo?.Length).FirstOrDefault()?.SyntaxRestrictionOnAccountNo?.Length}");
             }
             else
                 Console.WriteLine($"Cannot find file {filename}");
