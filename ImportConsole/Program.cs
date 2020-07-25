@@ -56,7 +56,7 @@ namespace ImportConsole
                         }
                     }
                 }
-                Console.WriteLine($"Reading file completed");
+                Console.WriteLine($"Reading file completed: {branches.Count} rows");
                 Console.WriteLine($"BankName: {branches.OrderByDescending(e => e.BankName?.Length).FirstOrDefault()?.BankName?.Length}");
                 Console.WriteLine($"BankCode: {branches.OrderByDescending(e => e.BankCode?.Length).FirstOrDefault()?.BankCode?.Length}");
                 Console.WriteLine($"BankBranchName: {branches.OrderByDescending(e => e.BankBranchName?.Length).FirstOrDefault()?.BankBranchName?.Length}");
